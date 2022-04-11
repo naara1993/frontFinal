@@ -1,0 +1,86 @@
+<div   class="card-title"  >
+  <div *ngFor="let element of datos_educacion">
+<div  *ngIf="isAdmin">
+ <div    style="margin-right: 30px;" class="d-flex justify-content-end">
+   <div  class="btn btn-edit" (click)="mostrar2=true" >  <a   class=" btn btn-right "> <i class="fas fa-plus"></i></a>
+<div  class="btn btn-edit" (click)="eliminar(i=element.id)" >  <a   class=" btn btn-right "> <i class="fas fa-trash"></i></a>
+</div> 
+</div>
+</div>
+</div>
+<div *ngIf="isAdmin"(click)="id(element.id)" (click)="mostrar=true" class=" btn btn-edit  d-flex justify-content-end" style="  margin-right:8%;" >  <a class=" btn btn-right "   > <i class="fas fa-pen"></i></a>
+</div>
+<div>
+<ul  style="list-style: none;" class="items-list" >
+  <li>
+<div style="margin-top:5%;"  class="  data-container">
+<a  style="text-decoration: none;margin-bottom: 5%;" >
+<div   class=" logo-image-container" >
+  <div  class="ll" >
+<img    class="img-fluid"   style=" margin-right:5%; width: 130px;  height: 120px;" src="{{element.imagen}}"  alt=""/>
+<div style="  margin-left: 10%;  margin-top: 5px;" class="  list-info ">
+    <h3 id="h3">  {{ element.escuela}} </h3>
+    <p  id="p1"> {{ element.titulo}}  </p>
+    <h4 id="h4"><span> {{element.fecha_inicio}}  </span> / <span>  {{element.fecha_final}}</span></h4>
+</div>
+</div>
+
+</div>
+</a>
+
+
+</div>
+ </li>
+</ul>
+</div>
+</div>
+<div class="mat-card "*ngIf="isAdmin"  > 
+  <div  *ngIf="mostrar"  id="estilo" >
+    <div *ngIf="educacion">
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm"  >
+    <div  class="form-group">
+      <label for="imagen">Imagen :  </label>
+      <input  type="img" name="imagen" id="imagen"  class="form-control" [(ngModel)]="educacion.imagen" required >
+      <label for="escuela">Escuela : </label> <br>
+      <input  type="text" name="escuela" id="escuela"  class="form-control" [(ngModel)]="educacion.escuela"  required >
+      <label  for="titulo">Titulo : </label> <br>
+      <input  type="text" name="titulo" id="esc"  class="form-control" [(ngModel)]="educacion.titulo"  required >
+      <label for="Fecha inicio">Fecha de inicio  : </label> <br>
+      <input  type="text" name="fecha_inicio" id="fehca_inicio"  class="form-control" [(ngModel)]="educacion.fecha_inicio" required >
+      <label for="Fecha final">Fecha final  : </label> <br>
+      <input type="text" name="fecha_i" id="fehca_i" class="form-control"  [(ngModel)]="educacion.fecha_final" required >
+        <button  (click)="Mostrar()" style="margin-top:3%;" class="btn btn-outline-success btn-block" >
+        <i class="fas fa-times-circle"></i> salir </button> 
+        <button  style="margin-top:3%;margin-left: 5%;"class="btn btn-outline-success btn-block" [disabled]="!f.valid">
+        <i class="fas fa-plus-circle"></i> Actualizar</button>
+    </div>
+     </form>
+  </div>
+</div>
+</div>
+
+<div class="mat-card" *ngIf="isAdmin"  > 
+  <div *ngIf="mostrar2"  id="estilo" >
+  <div>
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm"  >
+    <div  class="form-group">
+      <label for="imagen">Imagen :  </label>
+      <input  type="img" name="imagen" id="imagen"  class="form-control" [(ngModel)]="imagen" required >
+      <label for="escuela">Escuela : </label> <br>
+      <input  type="text" name="escuela" id="escuela"  class="form-control" [(ngModel)]="escuela"  required >
+      <label  for="titulo">Titulo : </label> <br>
+      <input  type="text" name="titulo" id="esc"  class="form-control" [(ngModel)]="titulo"  required >
+      <label for="Fecha inicio">Fecha de inicio  : </label> <br>
+      <input  type="text" name="fecha_inicio" id="fehca_inicio"  class="form-control" [(ngModel)]="fecha_inicio" required >
+      <label for="Fecha final">Fecha final  : </label> <br>
+      <input type="text" name="fecha_i" id="fehca_i" class="form-control"  [(ngModel)]="fecha_final" required >
+        <button  (click)="Mostrar2()" style="margin-top:3%;margin-left: 3%;" class="btn btn-outline-success btn-block" >
+        <i class="fas fa-times-circle"></i> salir </button> 
+        <button  style="margin-top:3%;margin-left: 5%;"class="btn btn-outline-success btn-block" [disabled]="!f.valid">
+        <i class="fas fa-plus-circle"></i> Crear</button>
+    </div>
+     </form>
+  </div>
+  </div>
+</div>
+</div>

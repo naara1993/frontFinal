@@ -1,0 +1,44 @@
+<div    class="">
+  <div class="card mat-card">
+    
+       <div  class=""><h2 style="text-align: center" style="text-align: center;color:aliceblue;  background-color: black;"  >Habilidades Técnicas</h2></div>
+      
+       <div   style="margin-top: 2%;" >   
+               <div  style="
+               margin-left: 10%;
+           "  >
+           <div style="display: inline-flex;" *ngFor="let dato of habilidad; let i = index"  class="">
+            <img class="img" src="{{dato.imagen}}" alt="">
+          <div style="  margin-left: 8%;"  >
+          <div  *ngIf="isAdmin" (click)="mostrar=true" > <a  class="btn btn-right"><i class="fas fa-plus"></i></a></div> 
+          <div  *ngIf="isAdmin"  (click)="eliminar(dato.id)"  class="btn btn-edit"  > <a><i class="fas fa-trash"></i></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div *ngIf="isAdmin" >
+    <div *ngIf="mostrar" >
+      <form (ngSubmit)="onCreate()"  novalidate    novalidate #f="ngForm" >
+        <div class="form-group">
+          <label  for="Modificar datos"> Agregar imagen </label> <br>
+          <input type="text" class="form-control" id="modificarDatos" name="modificarDatos"[(ngModel)]="imagen"  required />
+         <div style="display:flex;justify-content:center" >
+         <button style="margin-top:3%;margin-right: 3%;" class="btn btn-outline-success btn-block" [disabled]="!f.valid">
+          <i class="fas fa-pencil-alt"></i> Agregar</button> 
+          <button (click)="Salir()"  style="margin-top:3%;" class="btn btn-outline-success btn-block" >
+          <i class="fas fa-times-circle"></i> salir </button> 
+            </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+      
+
+    

@@ -1,0 +1,96 @@
+*{
+  box-sizing: border-box;
+}
+.profile-image{
+border-radius: 50%;
+ width: 260px;
+ height: 260px;
+ margin-top: -110px;
+ z-index: 1;
+}
+
+.mat-card{
+margin: 15px 15px;
+padding: 20px;
+}
+#estilo-imagen{
+  width: 100%;
+  height: 550px;
+  border-radius: 40px;
+}
+div.card.mat-card{
+border-radius: 40px;
+border-color: blue;
+padding: 0%;
+
+
+}
+svg.bi.bi-pencil-fill{
+  color: black;
+  width: 100px;
+}
+.imagen{
+  width: 40px;
+  height: 40px;
+}
+ul#info-details li{
+  list-style: none;
+}
+ul#info-details li a{
+text-decoration: none;
+}
+div #info-details .d-flex .justify-content-end{
+  margin-top: 5%;
+}
+#info-data{
+  margin:  10px;
+}
+a.nav-link.btn.btn-primary{
+  background-color: #0D6E9D;
+}
+.img{
+  width: 130px;
+  height: 120px;
+}
+.ul{
+  list-style: none;
+}
+.a{
+  display: flex;
+  text-decoration: none;
+  margin-bottom: 5%;
+}
+
+.div_botones{
+  margin-right: 30px;
+  display: flex;
+    justify-content: end;
+}
+.info{
+  margin: 1%;
+}
+
+.sacar{
+  display: flex;
+}
+@media screen and (max-width: 1300px){
+
+#profile-image{
+  border-radius:80px;
+  width:150px;
+  height:150px;
+}
+.parte{
+  display: flex;
+}
+.sacar{
+ display: inline;
+}
+
+}
+@media screen and (max-width: 450px){
+
+  #estilo-imagen{
+    height:250px;
+  }
+  }

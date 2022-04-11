@@ -1,0 +1,88 @@
+.mat-card{
+    margin: 15px 15px;
+    padding: 20px;
+    }
+    .p{
+      display: inline-flex;
+
+          }
+    div.card.mat-card{
+   
+    border-color: blue;
+    padding: 0%;
+    }
+
+    .circulo{
+      width: 150px;
+      height: 130px;
+      border-radius: 70%;
+      background:black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin:0px auto;
+      padding:3%
+    }
+    .circulo > p {
+      font-family: sans-serif;
+      color: black;
+      font-size: 90%;
+      font-weight: bold;
+    }
+
+    .f{
+      display: block;justify-content: center;margin-top: 23%;
+    }
+
+    .ll{
+      display: inline-flex;justify-content: center;
+    }
+    .pp{
+      display:flex;
+    }
+
+  
+      @media screen and (max-width: 1300px){
+
+        .pp{
+          display:flex;
+          margin-right: 20%;
+        }
+        .circulo{
+          width: 90px;
+          height: 90px;
+          border-radius: 70%;
+          background:black;
+          
+      
+        }
+         
+         }
+
+         @media screen and (max-width: 700px){
+
+          .pp{
+            display:inline;
+          }
+          
+    .circulo{
+      width: 150px;
+      height: 130px;
+      border-radius: 70%;
+      background:black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin:0px auto;
+      padding:3%
+    }
+    .circulo > p {
+      font-family: sans-serif;
+      color: black;
+      font-size: 90%;
+      font-weight: bold;
+    }
+           
+           }

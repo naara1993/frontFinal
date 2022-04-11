@@ -1,0 +1,42 @@
+
+<div class="">
+  <div class="card mat-card">
+    <div class="card-body">
+      <div class="card-title">
+        <h2> <u> Acerca de mi  </u>  </h2>
+      </div>
+      <div> 
+        <div (click)="mostrar=true"  *ngIf="isAdmin" class="btn-edit" >
+          <a
+            style="display: flex; flex-flow: row-reverse"
+            class="btn btn-right"
+          >  
+            <i class="fas fa-pen"></i
+          ></a>
+        </div>
+      <div  *ngFor="let dato of sobreMi; let i = index"  class="">
+        <p id="text-acercade">{{ dato.cadena }}</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div>
+    <div  *ngIf="mostrar">
+      <form  (ngSubmit)="onUpdate()" novalidate    novalidate #f="ngForm" >
+        <div class="form-group">
+          <label  for="Modificar datos"> Modificar datos </label> <br>
+                    <input type="text" class="form-control" id="modificarDatos" name="modificarDatos"
+            [(ngModel)]="sobre_mi.cadena" required />
+         <div style="display:flex;justify-content:center" >
+          <button style="margin-top:3%;margin-right: 3%;" class="btn btn-outline-success btn-block" [disabled]="!f.valid">
+            <i class="fas fa-pencil-alt"></i> Actualizar</button> 
+            <button  (click)="Mostrar()" style="margin-top:3%;" class="btn btn-outline-success btn-block" >
+              <i class="fas fa-times-circle"></i> salir </button> 
+            </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

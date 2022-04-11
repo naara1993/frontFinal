@@ -1,0 +1,64 @@
+<div   #inicio class="">
+  <div style="margin-top: 2%">
+    <div class="card mat-card">
+      <div class="profile1">
+        <img  class="img-fluid" src="./assets/mar3.gif" id="estilo-imagen" alt="" />
+        <div class="  parte  card-body">
+          <div id="sacar" class="sacar mb-3 info-img">
+            <div class="p-2 ">
+              <img class="img-fluid" class="profile-image" id="profile-image" src="./assets/j.jpg" alt="" />
+            </div>
+            <div  style=" display: inline-flex;">
+              <div *ngIf="isAdmin"   (click)="mostrar=true" (click)="mostrar2=false" class="btn " style="margin-top: 5%; padding: 0px 100px 0px 30px;"  >     <i   class="fas fa-pen"></i> </div>   
+            <div  *ngFor="let personas of persona" class="detalle"  >
+              <div class="d-flex justify-content-start" id="info-data">
+                <div style="padding-top:5%;" >
+                  <h1 id="nombre" class="card-title">{{personas.nombreCompleto}}  </h1>
+                  <div class="card-text">
+                    <p id="domicilio">{{personas.domicilio}}</p>
+                  </div>
+                  <div class="card-text">
+                    <span id="profesion">{{personas.profesion}} </span>
+                   <a (click)='scroll(inicio)' routerLink="/portafolio">  Informacion de Contacto</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+        </div>
+      </div>
+      <div  style=" margin-bottom: 5%;"  *ngIf="isAdmin">  
+        <div *ngIf="mostrar">
+      <div   class="card mat-card" >
+        <div class="">            
+            <div    class="col-md-4 mx-auto">
+                <form (ngSubmit)="onUpdate()"  novalidate #f="ngForm">
+                  <h4>Actualizar datos en persona</h4>
+                  <div class="form-group">
+                  <label style="margin-top:3%;" for="nombreCompleto"> Nombre Completo</label>
+                    <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto"
+                    [(ngModel)]="pers.nombreCompleto" required>
+                    <label style="margin-top:3%;" for="domicilio">domicilio</label>
+                    <input type="text" class="form-control" id="domicilio" name="domicilio"
+                    [(ngModel)]="pers.domicilio" required>
+                    <label style="margin-top:3%;" for="profesion">profesion</label>
+                    <input type="text" class="form-control" id="profesion" name="profesion"
+                    [(ngModel)]="pers.profesion" required>
+                    <button style="margin-top:3%;margin-right: 5%;" class="btn btn-outline-success btn-block" [disabled]="!f.valid">
+                      <i class="fas fa-pencil-alt"></i> Actualizar</button> 
+                      <button  (click)="Mostrar()" style="margin-top:3%;" class="btn btn-outline-success btn-block" >
+                        <i class="fas fa-times-circle"></i> salir </button> 
+                  </div>
+              </form>
+            </div>
+        </div>
+    </div>
+
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="">
+<div class="card mat-card" >
+
+<div ><h2 style="text-align: center" style="text-align: center;color:aliceblue;  background-color: black;"  >Habilidades Blandas</h2></div>
+
+
+
+<div style="margin-bottom: 3%;"> 
+<div class="pp" style="margin-left:3%;">
+
+
+<div  class="" style=" margin-left: 4%;" *ngFor="let dato of habilidad; let i = index"  class="">
+<div class="circulo f " ><p style=" color:aliceblue;  margin-top: 15%;"> <u style=" color: aliceblue;"> {{dato.nombre}} </u>  </p>
+
+
+<div>
+<div  class="ll" >
+<div  *ngIf="isAdmin" (click)="mostrar=true" > <a  class="btn btn-right"><i class="fas fa-plus"></i></a></div> 
+<div  *ngIf="isAdmin"  (click)="eliminar(dato.id)"  class="btn btn-edit"  > <a><i class="fas fa-trash"></i></a></div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div *ngIf="isAdmin" >
+<div *ngIf="mostrar" >
+<form (ngSubmit)="onCreate()"  novalidate    novalidate #f="ngForm" >
+<div class="form-group">
+    <label  for="Agregar imagen"> Agregar imagen </label> <br>
+    <input type="text" class="form-control" id="imagen" name="imagen"[(ngModel)]="imagen"  required />
+    
+<label  for="Agregar Nombre"> Agregar Nombre </label> <br>
+<input type="text" class="form-control" id="nombre" name="nombre"[(ngModel)]="nombre"  required />
+<div style="display:flex;justify-content:center" >
+<button style="margin-top:3%;margin-right: 3%;" class="btn btn-outline-success btn-block" [disabled]="!f.valid">
+<i class="fas fa-pencil-alt"></i> Agregar</button> 
+<button (click)="Salir()"  style="margin-top:3%;" class="btn btn-outline-success btn-block" >
+<i class="fas fa-times-circle"></i> salir </button> 
+ </div>
+</div>
+</form>
+</div>
+</div>
+
+
+
+
+</div>
+</div>

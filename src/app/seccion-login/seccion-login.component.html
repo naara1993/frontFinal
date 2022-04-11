@@ -1,0 +1,87 @@
+
+<!--
+<div class="">
+    <header> 
+      <nav  class=" navbar-expand-md navbar-light   navbar  bg-black">
+        <a style="color: aliceblue; margin-left: 2%" class="navbar-brand" >Naara Belen Cataldo</a>  
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav nav d-flex justify-content-end" style="margin-right: 5%">
+          <li class="nav-item">
+            <a style="color: aliceblue" class="nav-link"   href="tel:+541144164278"> 
+              <i class="fas fa-phone"></i>
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a style="color: aliceblue" class="nav-link active" 
+            href="mailto:naarabelencataldo@outlook.com?Subject=%20%20%20%20">
+      
+              <i  class="fas fa-envelope"></i
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a style="color: aliceblue" class="nav-link"   href="https://www.instagram.com/naaracataldo/?hl=es-la" target="_blank"     >
+              <i class="fab fa-instagram"></i
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a style="color: aliceblue" class="nav-link btn " href="https://www.linkedin.com/in/naaracataldo/" target="_blank" 
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </li>
+          <li class="nav-item" *ngIf="!isLogged">
+            <a class="nav-link" style="color:aliceblue;" routerLink="/login"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
+          </li>
+          <li class="nav-item" *ngIf="isLogged" (click)="onLogOut()">
+            <a  class="nav-link" style="cursor: pointer;color:aliceblue;"><i class="fas fa-door-open" ></i> Cerrar Sesión</a>
+          </li>
+          
+        </ul>
+      </div>
+      </nav>
+    </header>
+  </div>
+-->
+ 
+<nav class=" fixed-top  navbar-expand-md navbar-dark bg-dark" >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <a style="color: aliceblue; margin-left: 2%" class="navbar-brand" id="fondo" >Naara Belen Cataldo</a>  
+          <ul style="margin-left:45%;" class=" navbar-nav nav" >
+        <li class="nav-item">
+          <a style="color: aliceblue" class="nav-link"   href="tel:+541144164278"> 
+            <i class="fas fa-phone"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a style="color: aliceblue" class="nav-link active" 
+          href="mailto:naarabelencataldo@outlook.com?Subject=%20%20%20%20">
+    
+            <i  class="fas fa-envelope"></i
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a style="color: aliceblue" class="nav-link"   href="https://www.instagram.com/naaracataldo/?hl=es-la" target="_blank"     >
+            <i class="fab fa-instagram"></i
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a style="color: aliceblue" class="nav-link"   href="https://www.linkedin.com/in/naaracataldo/" target="_blank"     >
+            <i class="fab fa-linkedin"></i
+          ></a>
+        </li>
+         <li class="nav-item" *ngIf="!isLogged">
+          <a class="nav-link" style="color:aliceblue;" routerLink="/login"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
+        </li>
+        <li class="nav-item" *ngIf="isLogged" (click)="onLogOut()">
+          <a  class="nav-link" style="cursor: pointer;color:aliceblue;"><i class="fas fa-door-open" ></i> Cerrar Sesión</a>
+        </li>
+</ul>
+    </div>
+</nav>
+

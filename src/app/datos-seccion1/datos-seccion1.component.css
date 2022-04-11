@@ -1,0 +1,36 @@
+.mat-card{
+margin: 15px 15px;
+padding: 20px;
+}
+div.card.mat-card{
+border-radius: 40px;
+border-color: blue;
+padding: 0%;
+
+
+}
+svg.bi.bi-pencil-fill{
+  color: black;
+  width: 100px;
+}
+
+a.nav-link.btn.btn-primary{
+  background-color: #0D6E9D;
+}
+.ul{
+  list-style: none;
+}
+.a{
+  display: flex;
+  text-decoration: none;
+  margin-bottom: 5%;
+}
+
+.div_botones{
+  margin-right: 30px;
+  display: flex;
+    justify-content: end;
+}
+.info{
+  margin: 1%;
+}
