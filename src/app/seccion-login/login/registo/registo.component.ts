@@ -21,6 +21,8 @@ export class RegistoComponent implements OnInit {
   errMsj: string;
   isLogged = false;
 
+  private readonly newProperty = this;
+
   constructor(
     private tokenService: TokenService,
     private authService: AuthService,
@@ -33,11 +35,33 @@ export class RegistoComponent implements OnInit {
       this.isLogged = true;
     }
   }
-
+  expresion:any;
   onRegister(): void {
+
+    if(this.nombre.length>=40 ){
+      alert("Solo hasta 40 caracteres ");
+    }else   if(this.nombre.length<5){
+    alert("ingrese mas de 5 caracteres en el nombre");
+    this.nombre="";      
+    }
+
+    if(this.nombreUsuario.length<5){
+      alert("el nombre de usuario debe contener mas de 5 caracteres en el nombre");
+      this.nombreUsuario="";
+    }
+
+    
+    
+   this.expresion = /^[a-z][\w.-]+@\w[\w.-]+\.[\w.-]*[a-z][a-z]$/i;
+
+if (!this.expresion.test(this.email)){
+alert("error en el formato del correo");
+this.email="";
+}
+  
     this.nuevoUsuario = new NuevoUsuario(this.nombre, this.nombreUsuario, this.email, this.password);
     this.authService.nuevo(this.nuevoUsuario).subscribe(
-      data => {
+      _data => {
         this.toastr.success('Cuenta Creada', 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
         });
@@ -48,10 +72,15 @@ export class RegistoComponent implements OnInit {
         this.errMsj = err.error.mensaje;
         this.toastr.error(this.errMsj, 'Fail', {
           timeOut: 3000,  positionClass: 'toast-top-center',
+          
         });
-        // console.log(err.error.message);
+        alert(this.errMsj);
+
       }
     );
   }
+
+
+   
 
 }
