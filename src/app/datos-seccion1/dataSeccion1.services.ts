@@ -9,7 +9,7 @@ import { DatosSeccion1 } from './datos-seccion1.models';
 })
 export class DataSeccion1{
 
-  URL = 'https://naara1993.herokuapp.com/sobreMi/';
+  URL = 'https://benjamin2010.herokuapp.com/sobreMi/';
 
 
 

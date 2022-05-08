@@ -10,7 +10,7 @@ import { Educacion } from './educacion.models';
   export class Educacionservicios{ 
 
 
-    DatosPersonaURL = 'https://naara1993.herokuapp.com/educacion/';
+    DatosPersonaURL = 'https://benjamin2010.herokuapp.com/educacion/';
 
     constructor(private httpClient: HttpClient) { }
 

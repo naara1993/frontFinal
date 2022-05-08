@@ -44,14 +44,10 @@ export class RegistoComponent implements OnInit {
     alert("ingrese mas de 5 caracteres en el nombre");
     this.nombre="";      
     }
-
     if(this.nombreUsuario.length<5){
       alert("el nombre de usuario debe contener mas de 5 caracteres en el nombre");
       this.nombreUsuario="";
     }
-
-    
-    
    this.expresion = /^[a-z][\w.-]+@\w[\w.-]+\.[\w.-]*[a-z][a-z]$/i;
 
 if (!this.expresion.test(this.email)){

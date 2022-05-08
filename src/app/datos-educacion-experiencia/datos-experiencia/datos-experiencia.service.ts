@@ -10,7 +10,7 @@ import { Experiencia } from './experiencia.models';
   export class Experienciaservicios{ 
 
 
-    DatosPersonaURL = 'https://naara1993.herokuapp.com/experiencia/';
+    DatosPersonaURL = 'https://benjamin2010.herokuapp.com/experiencia/';
 
     constructor(private httpClient: HttpClient) { }
 

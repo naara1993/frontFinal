@@ -16,7 +16,7 @@ import { Tecnicas } from './habilidadesTecnicas.models';
 export class HablidadaesTecnicasServices{ 
 
 
-    HabilidadesTecnicasURL = 'https://naara1993.herokuapp.com/tecnicas/';
+    HabilidadesTecnicasURL = 'https://benjamin2010.herokuapp.com/tecnicas/';
 
     constructor(private httpClient: HttpClient) { }
 

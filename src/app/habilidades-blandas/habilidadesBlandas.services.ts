@@ -17,7 +17,7 @@ import { HabilidadesBlandas } from './habilidadesBlandas.models';
 export class HablidadaesBlandasServices{ 
 
 
-    HabilidadesTecnicasURL = 'https://naara1993.herokuapp.com/blandas/';
+    HabilidadesTecnicasURL = 'https://benjamin2010.herokuapp.com/blandas/';
 
     constructor(private httpClient: HttpClient) { }
 

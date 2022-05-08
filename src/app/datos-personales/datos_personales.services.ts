@@ -14,7 +14,7 @@ import { DatosPersona } from './datospersonales.models';
 export class Datos_personales_servicios{ 
 
 
-    DatosPersonaURL = 'https://naara1993.herokuapp.com/persona/';
+    DatosPersonaURL = 'https://benjamin2010.herokuapp.com/persona/';
 
     constructor(private httpClient: HttpClient) { }
 

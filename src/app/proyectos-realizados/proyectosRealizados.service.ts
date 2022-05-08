@@ -15,7 +15,7 @@ import { proyectosRealizados } from './proyectosRealizados.models';
 export class proyectosRealizadosService{ 
 
 
-    DatosPersonaURL = 'https://naara1993.herokuapp.com/proyectos/';
+    DatosPersonaURL = 'https://benjamin2010.herokuapp.com/proyectos/';
 
     constructor(private httpClient: HttpClient) { }
 
